@@ -1,0 +1,76 @@
+.titulo {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.cerro2 {
+  height: 29vh;
+  width: 49vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+}
+
+.guardar {
+  float: left;
+  margin-top: 10px;
+  margin-right: 3px;
+  width: 33px;
+  border: 0px solid;
+  background-color: transparent;
+}
+
+.play {
+  float: right;
+  margin-top: 10px;
+  margin-left: 4%;
+  width: 27px;
+}
+.star {
+  margin-left: 120px;
+  margin-top: -20px;
+  width: 30px;
+}
+
+.star2 {
+  margin-left: 5px;
+  margin-top: -20px;
+  width: 30px;
+}
+.star3 {
+  margin-left: 5px;
+  margin-top: 0px;
+  width: 30px;
+}
+.star4 {
+  margin-left: 5px;
+  margin-top: 0px;
+  width: 30px;
+}
+
+.buscar {
+  float: right;
+  margin-left: 310px;
+  margin-top: -35px;
+  width: 30px;
+}
+
+.comentario1 {
+  color: white;
+  background-color: rgb(189, 189, 189);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  width: 60vh;
+  height: 18vh;
+}
+
+.leer {
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0px;
+  margin-right: 15px;
+}
