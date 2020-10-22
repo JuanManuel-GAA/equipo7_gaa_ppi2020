@@ -1,0 +1,58 @@
+.Letra {
+  margin-top: 11px;
+  font-size: 20px;
+  color: white;
+}
+
+.Letra1 {
+  margin-top: 11px;
+  margin-left: 5px;
+  font-size: 20px;
+  color: white;
+}
+
+.recomendaciones {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.titulo {
+  font-size: 20px;
+  text-align: center;
+}
+.contenido {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.fondo {
+  background-color: rgb(197, 196, 196);
+  height: 80px;
+}
+
+.fondo1 {
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+}
+
+.contenido1 {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.lapiz {
+  float: right;
+  margin-top: -50px;
+  margin-right: 10px;
+}
+
+.lapiz1 {
+  float: right;
+  margin-top: -30px;
+  margin-right: 10px;
+}
