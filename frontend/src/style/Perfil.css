@@ -1,0 +1,56 @@
+.boton1 {
+  text-align: left;
+  color: white;
+  background-color: #007ec1;
+  border-color: #007ec1;
+  float: left;
+}
+
+.boton2 {
+  width: 50vh;
+  color: white;
+  background-color: #007ec1;
+  line-height: 20px;
+  float: right;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 64px;
+  object-fit: cover;
+  object-position: center;
+  width: 64px;
+}
+
+.Derecha {
+  text-align: right;
+  display: inline-block;
+  padding: 15px;
+}
+
+.Izquierda {
+  text-align: left;
+  display: inline-block;
+  padding: 15px;
+}
+.cerro {
+  margin-right: 10vh;
+  margin-left: 10vh;
+  border-radius: 50%;
+  height: 64px;
+  object-fit: cover;
+  object-position: center;
+  width: 64px;
+}
+div .segunda {
+  background-color: rgb(189, 189, 189);
+
+  width: 100%;
+  min-height: 100%;
+}
+#abajo {
+  display: inline-block;
+}
+#cali {
+  display: inline-block;
+}
