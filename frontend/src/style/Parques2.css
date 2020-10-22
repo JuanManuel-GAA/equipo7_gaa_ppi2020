@@ -1,0 +1,31 @@
+.carousel {
+  width: 50vh;
+  height: 40vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%
+  }
+  
+  .Transporte1{
+    background-color: rgb(197, 196, 196);
+    font-size: 18px;
+  }
+  .Transporte2{
+    background-color: white;
+    font-size: 18px;
+  }
+  .Boton4{
+    background-color:#007ec1;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .Libro{
+    width: 9vh;
+    height: 9vh;
+  }
+  
+  .Botones{
+    margin-top: 2.5vh;
+  }

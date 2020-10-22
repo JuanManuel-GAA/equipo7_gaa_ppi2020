@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../style/Bienvenida.css";
 import { withRouter } from "react-router-dom";
 
 const Bienvenida = (props) => {
