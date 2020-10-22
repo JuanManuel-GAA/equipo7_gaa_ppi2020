@@ -1,4 +1,4 @@
-.titulo2{
+.titulo2 {
   text-align: center;
   display: block;
   margin-left: auto;
@@ -6,7 +6,7 @@
   color: #007ec1;
 }
 
-.Descripcion{
+.Descripcion {
   text-align: center;
   font-size: 25px;
   display: block;
@@ -15,6 +15,6 @@
   margin-top: 50px;
 }
 
-.navbar{
-  background-color: #007ec1
-  }
+.navbar {
+  background-color: #007ec1;
+}

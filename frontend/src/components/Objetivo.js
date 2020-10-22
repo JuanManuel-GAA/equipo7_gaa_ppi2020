@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/Objetivo.css";
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import { Menu1 } from "./Menu1";
 
