@@ -1,0 +1,46 @@
+.nosotros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 3fr);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.Des {
+  padding: 1em;
+  border-radius: 25%;
+}
+
+.Des:hover {
+  border: 1px solid lightblue;
+}
+
+#C {
+  grid-column: 3;
+  grid-row: 1;
+}
+#M {
+  grid-column: 1;
+  grid-row: 1;
+}
+#L {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#S {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.Fto {
+  max-width: 20vh;
+  border-radius: 25%;
+  padding: 0%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.T_p {
+  text-align: center;
+}
