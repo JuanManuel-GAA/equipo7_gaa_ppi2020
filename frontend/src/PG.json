@@ -1,0 +1,19 @@
+{
+    "PG": [
+      {
+        "id": 1,
+        "Nombre_Parque": "Cerro Pan de Azucar",
+        "Descripcion": "El cerro Pan de Azúcar es una formación rocosa ubicada en el centroriente de la ciudad Medellín, Antioquia, fue el punto clave para empezar la construcción de la Villa de la Candelaria de Medellín. "
+      },
+      {
+        "id": 2,
+        "Nombre_Parque": "Cementerio de SanPedro",
+        "Descripcion": "Un área que cualquier persona o turista no quiere visitar cuando viaja es el cementerio. Estos espacios significan a menudo tristeza, muerte y situaciones dolorosas. Pero en el departamento de Antioquia este contexto cambia un poco con el Cementerio de San Pedro, al cual puedes ir.Aunque parezca extraño no debes de sorprenderte. En este cementerio en concreto se realizan recorridos en diversas noches. Los paseos son temáticos y están relacionados con las situaciones del lugar. Observarás cómo están construidas las tumbas desde la antigüedad y cuáles son las más famosas."
+      },
+      {
+        "id": 3,
+        "Nombre_Parque": "Parque De las luces",
+        "Descripcion": "Para ir al Parque de las Luces puedes trasladarte a San Antonio. No es un parque corriente, normal o común como los demás. Esto debido a que en el sitio se exponen charlas o conversatorios sobre la historia, tradición y cultura de la ciudad. Por ello siempre hay guías que cuentan dichos acontecimientos. El Parque de las Luces está dedicado a los locales para que conozcan sus antecedentes. Pero también se encuentra disponible para los extranjeros y personas de otras ciudades. Estos tienen la oportunidad de descubrir lo que realmente pasó anteriormente en cuanto a política y sociedad."
+      }
+    ]
+  }
