@@ -1,5 +1,4 @@
 import React from "react";
-import "../style/HistoriaEdit.css";
 import { withRouter } from "react-router-dom";
 
 import Menu2 from "./Menu2";
