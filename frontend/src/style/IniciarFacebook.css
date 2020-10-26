@@ -1,0 +1,33 @@
+.ContinuarFacebook {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: white;
+}
+
+.IconFacebook2 {
+  width: 80px;
+  height: 80px;
+}
+
+.gris {
+  color: #999999;
+}
+
+.negro {
+  color: #363535;
+  font-weight: 600;
+}
+
+.btn .btn {
+  background-color: #007ec1;
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.negro2 {
+  font-size: 12px;
+}

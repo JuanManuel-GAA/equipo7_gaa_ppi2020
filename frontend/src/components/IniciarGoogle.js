@@ -1,10 +1,11 @@
 import React from "react";
+import "../style/IniciarGoogle.css";
 import { withRouter } from "react-router-dom";
 
-const RegistroGoogle = (props) => {
+const IniciarGoogle = (props) => {
   const { history } = props;
   return (
-    <div className="RegistroGoogle">
+    <div className="IniciarGoogle">
       <div className="text-center ">
         <div className="col-sm-8 main-section mt-0">
           <img
@@ -12,7 +13,7 @@ const RegistroGoogle = (props) => {
             src="./imagenes_PPI/IconGoogle2.png"
             alt="Google"
           />
-          <h5 className="mb-3">Registrate con tu cuenta de Google</h5>
+          <h5 className="mb-3">Inicia sesión con tu cuenta de Google</h5>
           <div className="modal-content user-img col-13  mt-1 mr-1  mb-4">
             <img
               className=""
@@ -41,7 +42,7 @@ const RegistroGoogle = (props) => {
                   className="btn Boton1"
                   onClick={() => history.push("/Inicio2")}
                 >
-                  Registrarse
+                  Iniciar
                 </button>
               </div>
             </form>
@@ -56,4 +57,4 @@ const RegistroGoogle = (props) => {
   );
 };
 
-export default withRouter(RegistroGoogle);
+export default withRouter(IniciarGoogle);

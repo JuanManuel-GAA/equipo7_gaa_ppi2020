@@ -1,0 +1,37 @@
+.Icon2 {
+  margin: 0px;
+  width: 150px;
+  height: 150px;
+}
+
+.modal-content {
+  background-color: #e5e8e8;
+  opacity: 0.95;
+  padding: 0 20px;
+  box-shadow: 0px 0px 3px #848484;
+}
+
+.main-section {
+  margin: 0 auto;
+  margin-top: 25%;
+  padding: 0;
+  color: #007ec1;
+}
+
+.user-img img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.forgot {
+  padding: 5px 0;
+}
+
+.forgot a {
+  color: black;
+}
