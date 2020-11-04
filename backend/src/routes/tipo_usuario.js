@@ -9,7 +9,7 @@ router.get('/',(req,res)=>{
 
         // tipo_usuario
     //Petición get
-router.get('/tipo_usuario',(req,res)=>{
+router.get('/tipo_Usuario',(req,res)=>{
     mysqlConnection.query('SELECT * FROM tipo_usuario',
     (err,rows,fields)=>{
       if(!err)
