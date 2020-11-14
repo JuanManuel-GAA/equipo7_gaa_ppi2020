@@ -22,28 +22,28 @@ router.get("/usuario", (req, res) => {
 //Petición post
 router.post("/usuario", (req, res) => {
   const {
+    ID,
+    ID_tipoUsuario,
     correo,
-    id_tipoUsuario,
     nombre_usuario,
     pais_origen,
     telefono,
     contrasena,
     sexo,
     fecha_nacimiento,
-    edad,
     nombre,
     apellidos
   } = req.body;
   let usuario = [
+    ID,
+    ID_tipoUsuario,
     correo,
-    id_tipoUsuario,
     nombre_usuario,
     pais_origen,
     telefono,
     contrasena,
     sexo,
     fecha_nacimiento,
-    edad,
     nombre,
     apellidos
   ];
@@ -58,36 +58,37 @@ router.post("/usuario", (req, res) => {
 });
 
 //Petición put
-router.put("/usuario/:correo", (req, res) => {
+router.put("/usuario/:ID", (req, res) => {
   const {
-    id_tipoUsuario,
+    ID_tipoUsuario,
+    correo,
     nombre_usuario,
     pais_origen,
     telefono,
     contrasena,
     sexo,
     fecha_nacimiento,
-    edad,
     nombre,
     apellidos
   } = req.body;
-  const { correo } = req.params;
+  const { ID } = req.params;
 
   mysqlConnection.query(
     `UPDATE usuario
-                       SET id_tipoUsusario=?,nombre_usuario=?, pais_origen=?, telefono=?, contrasena=?, sexo=?, fecha_nacimiento=?, edad=?, nombre=?, apellidos = ? 
-                       WHERE correo = ?`,
+                       SET ID_tipoUsusario=?,correo=?,nombre_usuario=?, pais_origen=?, telefono=?, contrasena=?, sexo=?, fecha_nacimiento=?, nombre=?, apellidos = ? 
+                       WHERE ID = ?`,
     [
-      id_tipoUsuario,
+      ID_tipoUsuario,
+      correo,
       nombre_usuario,
       pais_origen,
       telefono,
       contrasena,
       sexo,
       fecha_nacimiento,
-      edad,
       nombre,
-      apellidos
+      apellidos,
+      ID
     ],
     (err, rows, fields) => {
       if (!err) {
@@ -100,11 +101,11 @@ router.put("/usuario/:correo", (req, res) => {
 });
 
 //PETICIÓN O SERVICIO DELETE - ELIMINACIÓN DE DATOS
-router.delete("/usuario/:correo", (req, res) => {
-  const { correo } = req.params;
+router.delete("/usuario/:ID", (req, res) => {
+  const { ID } = req.params;
   mysqlConnection.query(
-    `DELETE FROM usuario WHERE correo =?`,
-    [correo],
+    `DELETE FROM usuario WHERE ID =?`,
+    [ID],
     (err, rows, fields) => {
       if ("!err") {
         res.json({ status: `El usuario ha sido eliminado` });
