@@ -23,8 +23,8 @@ router.get('/visita',(req,res)=>{
 
     //Petición post
    router.post('/visita', (req, res) => {
-    const {id_parque, correo_usuario, numero_visita} = req.body
-let visita = [id_parque, correo_usuario, numero_visita];
+    const {ID_parque, ID_usuario, numero_visita} = req.body
+let visita = [ID_parque, ID_usuario, numero_visita];
     let nuevaVisita = `INSERT INTO visita VALUES (?,?,?);`
 
    mysqlConnection.query(nuevaVisita,visita, (err,results,fields) => {
@@ -36,14 +36,14 @@ let visita = [id_parque, correo_usuario, numero_visita];
   });
   
      //Petición put
-  router.put('/visita/:id_parque,correo_usuario', (req,res) => {
-  const {numero_visita} = req.body;
-  const {id_parque,correo_usuario} = req.params;
+  router.put('/visita/:numero_visita', (req,res) => {
+  const {ID_parque, ID_usuario} = req.body;
+  const {numero_visita} = req.params;
 
 mysqlConnection.query(`UPDATE visita
-                       SET numero_visita=?
-                       WHERE id_parque=?,correo_usuario= ?`,
-                       [id_parque, correo_usuario, numero_visita], (err, rows,fields) => {
+                       SET ID_parque=?,ID_usuario
+                       WHERE numero_visita = ?`,
+                       [ID_parque, ID_usuario, numero_visita], (err, rows,fields) => {
    if(!err){
     res.json({status: `Visita actualizada con éxito`});
    }else{
@@ -53,9 +53,9 @@ mysqlConnection.query(`UPDATE visita
 });
 
   //PETICIÓN O SERVICIO DELETE - ELIMINACIÓN DE DATOS
-  router.delete('/visita/:id_parque,correo_usuario', (req,res) => {
-    const { id_parque,correo_usuario } = req.params;
-    mysqlConnection.query(`DELETE FROM visita WHERE id_parque=?,correo_usuario =?`,[id_parque,correo_usuario],(err,rows,fields) => {
+  router.delete('/visita/:numero_visita', (req,res) => {
+    const { numero_visita } = req.params;
+    mysqlConnection.query(`DELETE FROM visita WHERE numero_visita=?`,[numero_visita],(err,rows,fields) => {
       if("!err"){
         res.json({status: `La visita ha sido eliminada`})
       }else{
