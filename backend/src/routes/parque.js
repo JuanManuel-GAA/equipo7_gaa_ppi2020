@@ -3,18 +3,15 @@ const router = Router();
 
 const mysqlConnection = require("../db/db.js");
 
-router.get("/", (req, res) => {
-  res.send("Si funciona");
-});
 
 // Parque
 //Petición get
 router.get("/parque", (req, res) => {
   mysqlConnection.query("SELECT * FROM parque", (err, rows, fields) => {
     if (!err) {
-      res.json(rows);
+      res.status(200).json(rows);
     } else {
-      console.log(err);
+      res.status(500);
     }
   });
 });
@@ -22,7 +19,6 @@ router.get("/parque", (req, res) => {
 //Petición post
 router.post("/parque", (req, res) => {
   const {
-    ID,
     nombre,
     puntuacion,
     comentario,
@@ -33,8 +29,10 @@ router.post("/parque", (req, res) => {
     longitud,
     latitud
   } = req.body;
-  let parque = [
-    ID,
+  
+  let nuevoParque = `INSERT INTO parque ( nombre, puntuacion, comentario, transporte, direccion, recomendaciones, historia, longitud, latitud) VALUES (?,?,?,?,?,?,?,?,?)`;
+
+  mysqlConnection.query(nuevoParque, [
     nombre,
     puntuacion,
     comentario,
@@ -44,14 +42,12 @@ router.post("/parque", (req, res) => {
     historia,
     longitud,
     latitud
-  ];
-  let nuevoParque = `INSERT INTO parque VALUES (?,?,?,?,?,?,?,?,?,?);`;
-
-  mysqlConnection.query(nuevoParque, parque, (err, results, fields) => {
+  ], (err, results, fields) => {
     if (err) {
-      return console.error(err.message);
+      res.status(500);
+    } else {
+      res.status(201).json({ message: `Parque ingresado` });
     }
-    res.json({ message: `Parque ingresado` });
   });
 });
 
@@ -70,10 +66,9 @@ router.put("/parque/:ID", (req, res) => {
   } = req.body;
   const { ID } = req.params;
 
-  mysqlConnection.query(
-    `UPDATE parque
-                       SET nombre=?, puntuacion=?, comentario=?, transporte=?, direccion=?, recomendaciones=?, historia=?, longitud=?, latitud = ? 
-                       WHERE ID = ?`,
+  let actualizarParque = `UPDATE parque SET nombre=?, puntuacion=?, comentario=?, transporte=?, direccion=?, recomendaciones=?, historia=?, longitud=?, latitud = ? 
+  WHERE ID = ?`;
+  mysqlConnection.query( actualizarParque, 
     [
       nombre,
       puntuacion,
@@ -88,9 +83,9 @@ router.put("/parque/:ID", (req, res) => {
     ],
     (err, rows, fields) => {
       if (!err) {
-        res.json({ status: `Parque actualizado con éxito` });
+        res.status(201).json({ status: `Parque actualizado con éxito` });
       } else {
-        console.log(err);
+        res.status(500);
       }
     }
   );
@@ -104,9 +99,9 @@ router.delete("/parque/:ID", (req, res) => {
     [ID],
     (err, rows, fields) => {
       if ("!err") {
-        res.json({ status: `El parque ha sido eliminado` });
+        res.status(200).json({ status: `El parque ha sido eliminado` });
       } else {
-        console.log(err);
+        res.status(500);
       }
     }
   );

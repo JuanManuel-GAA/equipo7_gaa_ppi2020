@@ -11,13 +11,11 @@ const usuario = require ('./src/routes/usuario.js');
 const parques_guardados = require ('./src/routes/parques_guardados');
 
 app.use('/api',parque);
-app.use('/api',parques_visitados);
 app.use('/api',tipo_usuario);
-app.use('/api',parques_guardados);
-app.use('/api',visita);
-app.use('/api',usuario);
+
+
 app.use(express.urlencoded({extended: false}));
 
-app.listen(3000,()=>{
+app.listen(3001,()=>{
   console.log('server started')
 });
