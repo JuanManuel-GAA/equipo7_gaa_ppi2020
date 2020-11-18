@@ -1,67 +1,80 @@
-const {Router} = require('express');
+const { Router } = require("express");
 const router = Router();
 
-const mysqlConnection = require('../db/db.js');
+const mysqlConnection = require("../db/db.js");
 
-router.get('/',(req,res)=>{
-  res.send('Si funciona')
-})
 
-        // parques_visitados
-    //Petición get
-router.get('/parques_visitados',(req,res)=>{
-    mysqlConnection.query('SELECT * FROM parques_visitados',
-    (err,rows,fields)=>{
-      if(!err)
-     {
-       res.json(rows);
-     }else{
-       console.log(err);
-     }
-    })
-}) 
-
-    //Petición post
-   router.post('/parques_visitados', (req, res) => {
-    const {ID,numero_visita, ID_usuario } = req.body
-    let parques_visitados = [ID,numero_visita, ID_usuario];
-    let nuevoParque_visitado = `INSERT INTO parques_visitados VALUES (?,?,?);`
-
-   mysqlConnection.query(nuevoParque_visitado,parques_visitados, (err,results,fields) => {
-     if(err){
-       return console.error(err.message);
-     }
-     res.json({message:`Parque ingresado`})
-   });
+// Parque_visitado
+//Petición get 
+router.get("/parque_visitado", (req, res) => {
+  mysqlConnection.query("SELECT * FROM parque_visitado", (err, rows, fields) => {
+    if (!err) {
+      res.status(200).json(rows);
+    } else {
+      res.status(500);
+    }
   });
+});
+
+//Petición post
+router.post("/parque_visitado", (req, res) => {
+  const {
+ID_parque,
+ID_usuario 
+ } = req.body;
   
-     //Petición put
-  router.put('/parques_visitados/:ID', (req,res) => {
-  const {numero_visita, ID_usuario } = req.body
-  const { ID } = req.params 
+  let nuevoParque_visitado = `INSERT INTO parque_visitado (ID_parque,ID_usuario) VALUES (?,?)`;
 
-mysqlConnection.query(`UPDATE parques_visitados
-                       SET numero_visita=?, ID_usuario 
-                       WHERE ID = ?`,
-                       [numero_visita, ID_usuario, ID], (err, rows,fields) => {
-   if(!err){
-    res.json({status: `Parque actualizado con éxito`});
-   }else{
-     console.log(err);
-   }
-});
-});
-
-  //PETICIÓN O SERVICIO DELETE - ELIMINACIÓN DE DATOS
-  router.delete('/parques_visitados/:ID', (req,res) => {
-    const { ID } = req.params;
-    mysqlConnection.query(`DELETE FROM parque WHERE ID =?`,[ID],(err,rows,fields) => {
-      if("!err"){
-        res.json({status: `El parque ha sido eliminado`})
-      }else{
-        console.log(err);
-      }
-    });
+  mysqlConnection.query(nuevoParque_visitado, [
+ID_parque,
+ID_usuario 
+  ], (err, results, fields) => {
+    if (err) {
+      res.status(500);
+    } else {
+      res.status(201).json({ message: `Visita registrada con exito` });
+    }
   });
+});
+
+//Petición put
+router.put("/parque_visitado/:ID", (req, res) => {
+  const {
+ID_parque,
+ID_usuario 
+  } = req.body;
+  const { ID } = req.params;
+
+  let actualizarParque_visitado = `UPDATE parque_visitado SET ID_parque=?,ID_usuario = ? 
+  WHERE ID = ?`;
+  mysqlConnection.query( actualizarParque_visitado, 
+    [
+ID_parque,
+ID_usuario],
+    (err, rows, fields) => {
+      if (!err) {
+        res.status(201).json({ status: `Visita actualizada con exito` });
+      } else {
+        res.status(500);
+      }
+    }
+  );
+});
+
+//PETICIÓN O SERVICIO DELETE - ELIMINACIÓN DE DATOS
+router.delete("/parque_visitado/:ID", (req, res) => {
+  const { ID } = req.params;
+  mysqlConnection.query(
+    `DELETE FROM parque_visitado WHERE ID =?`,
+    [ID],
+    (err, rows, fields) => {
+      if ("!err") {
+        res.status(200).json({ status: `La visita a sido eliminada exitosamente ` });
+      } else {
+        res.status(500);
+      }
+    }
+  );
+});
 
 module.exports = router;
