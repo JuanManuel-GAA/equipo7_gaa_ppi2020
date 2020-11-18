@@ -3,18 +3,15 @@ const router = Router();
 
 const mysqlConnection = require("../db/db.js");
 
-router.get("/", (req, res) => {
-  res.send("Si funciona");
-});
 
 // usuario
 //Petición get
 router.get("/usuario", (req, res) => {
   mysqlConnection.query("SELECT * FROM usuario", (err, rows, fields) => {
     if (!err) {
-      res.json(rows);
+      res.status(200).json(rows);
     } else {
-      console.log(err);
+      res.status(500);
     }
   });
 });
@@ -22,8 +19,7 @@ router.get("/usuario", (req, res) => {
 //Petición post
 router.post("/usuario", (req, res) => {
   const {
-    ID,
-    ID_tipoUsuario,
+    ID_tipo_usuario,
     correo,
     nombre_usuario,
     pais_origen,
@@ -34,9 +30,11 @@ router.post("/usuario", (req, res) => {
     nombre,
     apellidos
   } = req.body;
-  let usuario = [
-    ID,
-    ID_tipoUsuario,
+  
+  let nuevoUsuario = `INSERT INTO usuario (ID_tipo_usuario, correo,  nombre_usuario, pais_origen, telefono, contrasena, sexo, fecha_nacimiento, nombre, apellidos) VALUES (?,?,?,?,?,?,?,?,?,?)`;
+
+  mysqlConnection.query(nuevoUsuario, [
+    ID_tipo_usuario,
     correo,
     nombre_usuario,
     pais_origen,
@@ -46,21 +44,19 @@ router.post("/usuario", (req, res) => {
     fecha_nacimiento,
     nombre,
     apellidos
-  ];
-  let nuevoUsuario = `INSERT INTO usuario VALUES (?,?,?,?,?,?,?,?,?,?,?);`;
-
-  mysqlConnection.query(nuevoUsuario, usuario, (err, results, fields) => {
+  ], (err, results, fields) => {
     if (err) {
-      return console.error(err.message);
+      res.status(500);
+    } else {
+      res.status(201).json({ message: `Usuario ingresado` });
     }
-    res.json({ message: `Usuario ingresado` });
   });
 });
 
 //Petición put
 router.put("/usuario/:ID", (req, res) => {
   const {
-    ID_tipoUsuario,
+    ID_tipo_usuario,
     correo,
     nombre_usuario,
     pais_origen,
@@ -73,28 +69,27 @@ router.put("/usuario/:ID", (req, res) => {
   } = req.body;
   const { ID } = req.params;
 
-  mysqlConnection.query(
-    `UPDATE usuario
-                       SET ID_tipoUsusario=?,correo=?,nombre_usuario=?, pais_origen=?, telefono=?, contrasena=?, sexo=?, fecha_nacimiento=?, nombre=?, apellidos = ? 
-                       WHERE ID = ?`,
+  let actualizarUsuario = `UPDATE usuario SET ID_tipo_ususario=?,correo=?,nombre_usuario=?, pais_origen=?, telefono=?, contrasena=?, sexo=?, fecha_nacimiento=?, nombre=?, apellidos = ? 
+  WHERE ID = ?`;
+  mysqlConnection.query( actualizarUsuario, 
     [
-      ID_tipoUsuario,
-      correo,
-      nombre_usuario,
-      pais_origen,
-      telefono,
-      contrasena,
-      sexo,
-      fecha_nacimiento,
-      nombre,
-      apellidos,
-      ID
+    ID_tipo_usuario,
+    correo,
+    nombre_usuario,
+    pais_origen,
+    telefono,
+    contrasena,
+    sexo,
+    fecha_nacimiento,
+    nombre,
+    apellidos,
+ID
     ],
     (err, rows, fields) => {
       if (!err) {
-        res.json({ status: `Usuario actualizado con éxito` });
+        res.status(201).json({ status: `Usuario actualizado con éxito` });
       } else {
-        console.log(err);
+        res.status(500);
       }
     }
   );
@@ -108,9 +103,9 @@ router.delete("/usuario/:ID", (req, res) => {
     [ID],
     (err, rows, fields) => {
       if ("!err") {
-        res.json({ status: `El usuario ha sido eliminado` });
+        res.status(200).json({ status: `El usuario ha sido eliminado` });
       } else {
-        console.log(err);
+        res.status(500);
       }
     }
   );
