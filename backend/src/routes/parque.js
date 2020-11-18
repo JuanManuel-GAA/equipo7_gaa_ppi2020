@@ -3,7 +3,6 @@ const router = Router();
 
 const mysqlConnection = require("../db/db.js");
 
-
 // Parque
 //Petición get
 router.get("/parque", (req, res) => {
@@ -20,63 +19,71 @@ router.get("/parque", (req, res) => {
 router.post("/parque", (req, res) => {
   const {
     nombre,
-    puntuacion,
     comentario,
     transporte,
-    direccion,
     recomendaciones,
     historia,
+    direccion,
     longitud,
     latitud
   } = req.body;
-  
-  let nuevoParque = `INSERT INTO parque ( nombre, puntuacion, comentario, transporte, direccion, recomendaciones, historia, longitud, latitud) VALUES (?,?,?,?,?,?,?,?,?)`;
 
-  mysqlConnection.query(nuevoParque, [
-    nombre,
-    puntuacion,
+  let nuevoParque = `INSERT INTO parque (  nombre,
     comentario,
     transporte,
-    direccion,
     recomendaciones,
     historia,
+    direccion,
     longitud,
-    latitud
-  ], (err, results, fields) => {
-    if (err) {
-      res.status(500);
-    } else {
-      res.status(201).json({ message: `Parque ingresado` });
+    latitud ) VALUES (?,?,?,?,?,?,?,?,?)`;
+
+  mysqlConnection.query(
+    nuevoParque,
+    [
+      nombre,
+      comentario,
+      transporte,
+      recomendaciones,
+      historia,
+      direccion,
+      longitud,
+      latitud
+    ],
+    (err, results, fields) => {
+      if (err) {
+        res.status(500);
+      } else {
+        res.status(201).json({ message: `Parque ingresado` });
+      }
     }
-  });
+  );
 });
 
 //Petición put
 router.put("/parque/:ID", (req, res) => {
   const {
     nombre,
-    puntuacion,
     comentario,
     transporte,
-    direccion,
     recomendaciones,
     historia,
+    direccion,
     longitud,
     latitud
   } = req.body;
   const { ID } = req.params;
 
-  let actualizarParque = `UPDATE parque SET nombre=?, puntuacion=?, comentario=?, transporte=?, direccion=?, recomendaciones=?, historia=?, longitud=?, latitud = ? 
+  let actualizarParque = `UPDATE parque SET nombre=?, comentario=?, transporte=?, recomendaciones=?, historia=?, direccion=?,  longitud=?, latitud = ? 
   WHERE ID = ?`;
-  mysqlConnection.query( actualizarParque, 
+  mysqlConnection.query(
+    actualizarParque,
     [
       nombre,
-      puntuacion,
       comentario,
       transporte,
-      direccion,
       recomendaciones,
       historia,
+      direccion,
       longitud,
       latitud,
       ID

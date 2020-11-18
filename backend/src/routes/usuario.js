@@ -3,7 +3,6 @@ const router = Router();
 
 const mysqlConnection = require("../db/db.js");
 
-
 // usuario
 //Petición get
 router.get("/usuario", (req, res) => {
@@ -30,27 +29,31 @@ router.post("/usuario", (req, res) => {
     nombre,
     apellidos
   } = req.body;
-  
+
   let nuevoUsuario = `INSERT INTO usuario (ID_tipo_usuario, correo,  nombre_usuario, pais_origen, telefono, contrasena, sexo, fecha_nacimiento, nombre, apellidos) VALUES (?,?,?,?,?,?,?,?,?,?)`;
 
-  mysqlConnection.query(nuevoUsuario, [
-    ID_tipo_usuario,
-    correo,
-    nombre_usuario,
-    pais_origen,
-    telefono,
-    contrasena,
-    sexo,
-    fecha_nacimiento,
-    nombre,
-    apellidos
-  ], (err, results, fields) => {
-    if (err) {
-      res.status(500);
-    } else {
-      res.status(201).json({ message: `Usuario ingresado` });
+  mysqlConnection.query(
+    nuevoUsuario,
+    [
+      ID_tipo_usuario,
+      correo,
+      nombre_usuario,
+      pais_origen,
+      telefono,
+      contrasena,
+      sexo,
+      fecha_nacimiento,
+      nombre,
+      apellidos
+    ],
+    (err, results, fields) => {
+      if (err) {
+        res.status(500);
+      } else {
+        res.status(201).json({ message: `Usuario ingresado` });
+      }
     }
-  });
+  );
 });
 
 //Petición put
@@ -71,19 +74,20 @@ router.put("/usuario/:ID", (req, res) => {
 
   let actualizarUsuario = `UPDATE usuario SET ID_tipo_ususario=?,correo=?,nombre_usuario=?, pais_origen=?, telefono=?, contrasena=?, sexo=?, fecha_nacimiento=?, nombre=?, apellidos = ? 
   WHERE ID = ?`;
-  mysqlConnection.query( actualizarUsuario, 
+  mysqlConnection.query(
+    actualizarUsuario,
     [
-    ID_tipo_usuario,
-    correo,
-    nombre_usuario,
-    pais_origen,
-    telefono,
-    contrasena,
-    sexo,
-    fecha_nacimiento,
-    nombre,
-    apellidos,
-ID
+      ID_tipo_usuario,
+      correo,
+      nombre_usuario,
+      pais_origen,
+      telefono,
+      contrasena,
+      sexo,
+      fecha_nacimiento,
+      nombre,
+      apellidos,
+      ID
     ],
     (err, rows, fields) => {
       if (!err) {
