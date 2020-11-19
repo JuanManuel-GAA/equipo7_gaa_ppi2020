@@ -44,11 +44,11 @@ router.put("/tipo_usuario/:ID", (req, res) => {
   } = req.body;
   const { ID } = req.params;
 
-  let actualizarParque = `UPDATE tipo_usuario SET nombre=?, descripcion=?  WHERE ID = ?`;
+  let actualizarTipo_usuario = `UPDATE tipo_usuario SET nombre=?, descripcion=?  WHERE ID = ?`;
   mysqlConnection.query( actualizarTipo_usuario, 
     [
       nombre,
-   	 descripcion
+   	 descripcion,
       ID
     ],
     (err, rows, fields) => {
