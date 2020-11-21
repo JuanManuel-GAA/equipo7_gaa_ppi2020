@@ -1,6 +1,5 @@
 const { Router } = require("express");
 const router = Router();
-
 const mysqlConnection = require("../db/db.js");
 
 // Parque
@@ -35,7 +34,7 @@ router.post("/parque", (req, res) => {
     historia,
     direccion,
     longitud,
-    latitud ) VALUES (?,?,?,?,?,?,?,?,?)`;
+    latitud ) VALUES (?,?,?,?,?,?,?,?)`;
 
   mysqlConnection.query(
     nuevoParque,
