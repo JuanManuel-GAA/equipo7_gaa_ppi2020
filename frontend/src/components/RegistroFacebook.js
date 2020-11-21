@@ -40,7 +40,7 @@ const RegistroFacebook = (props) => {
             <button
               type="button"
               className="btn mt-4"
-              onClick={() => history.push("/Inicio2")}
+              onClick={() => history.push("/Parques1")}
             >
               Continuar
             </button>

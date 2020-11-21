@@ -43,7 +43,7 @@ const IniciarSesion = (props) => {
           <button
             className="btn btn-lg Boton1 btn-block mt-0 mb-2"
             type="submit"
-            onClick={() => history.push("/Inicio2")}
+            onClick={() => history.push("/Parques1")}
           >
             Iniciar sesión
           </button>

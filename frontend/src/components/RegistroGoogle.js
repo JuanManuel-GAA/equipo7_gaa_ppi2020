@@ -39,7 +39,7 @@ const RegistroGoogle = (props) => {
                 <button
                   type="submit"
                   className="btn Boton1"
-                  onClick={() => history.push("/Inicio2")}
+                  onClick={() => history.push("/Parques1")}
                 >
                   Registrarse
                 </button>

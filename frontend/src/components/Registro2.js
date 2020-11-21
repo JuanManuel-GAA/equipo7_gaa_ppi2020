@@ -50,7 +50,7 @@ const Registro2 = (props) => {
           <button
             className="btn btn-lg Boton1 btn-block mt-5 mb-5"
             type="submit"
-            onClick={() => history.push("/Inicio2")}
+            onClick={() => history.push("/Parques1")}
           >
             Registrarse
           </button>

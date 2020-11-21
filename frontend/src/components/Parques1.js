@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar, Form, FormControl } from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
 import "../style/Parques1.css";
+import "../style/Parques1.css";
+
 
 import Menu2 from "./Menu2";
 
@@ -78,7 +80,7 @@ const Parques1 = (props) => {
       </div>
       <button
         type="button"
-        class="Boton2 btn-primary"
+        class="Boton2 btn btn-primary"
         data-toggle="modal"
         data-target="#Estrellas"
       >
