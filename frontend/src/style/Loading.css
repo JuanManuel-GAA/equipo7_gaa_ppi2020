@@ -1,0 +1,53 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.295)
+}
+
+
+
+.divpadre {
+  height: 100vh;
+  position: relative;
+  
+}
+
+.divhijo {
+  
+  margin: 0;
+  position: absolute;
+  margin-top: 40vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.eslogan {
+  margin: 0;
+  position: absolute;
+  margin-top: -82vh;
+  left: 50%;
+  right: -25%;
+  transform: translate(-50%, -50%);
+ 
+  
+  
+}
+
+.parrafo{
+margin-left: 7px;
+font-weight: bold;
+color: rgb(0, 0, 0)
+}
+
+
+.Logo2{
+
+margin-top: 15vh;
+margin-left: -6%;
+transform: translate(3%, -0%);
+  
+  
+  
+  
+  
+}
