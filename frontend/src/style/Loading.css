@@ -16,7 +16,7 @@
   
   margin: 0;
   position: absolute;
-  margin-top: 40vh;
+  margin-top: 5vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -24,7 +24,7 @@
 .eslogan {
   margin: 0;
   position: absolute;
-  margin-top: -82vh;
+  margin-top: -115vh;
   left: 50%;
   right: -25%;
   transform: translate(-50%, -50%);
@@ -43,7 +43,7 @@ color: rgb(0, 0, 0)
 .Logo2{
 
 margin-top: 15vh;
-margin-left: -6%;
+margin-left: 10px;
 transform: translate(3%, -0%);
   
   
