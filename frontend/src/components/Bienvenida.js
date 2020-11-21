@@ -15,7 +15,7 @@ const Bienvenida = (props) => {
       <button
         type="button"
         className="btn Boton1 mt-1"
-        onClick={() => history.push("/Inicio1")}
+        onClick={() => history.push("/IniciarSesion")}
       >
         Continuar
       </button>

@@ -72,6 +72,13 @@ const IniciarSesion = (props) => {
             />
             Iniciar sesión con Google
           </button>
+          <button
+            className="btn btn-lg Boton1 btn-block mt-5 mb-2"
+            onClick={() => history.push("/Registro1")}
+          >
+            {" "}
+            Registrarse{" "}
+          </button>
           <p className="mb-3 py-5 text-muted"> © Quality Travel, 2020</p>
         </form>
       </Container>
