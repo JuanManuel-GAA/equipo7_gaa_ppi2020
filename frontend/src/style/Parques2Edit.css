@@ -9,3 +9,10 @@
   height: 2vh;
   margin: 0;
 }
+
+.Editar{
+  width: 8vh;
+  height: 8vh;
+  font-size: 20px;
+  float:right;
+}

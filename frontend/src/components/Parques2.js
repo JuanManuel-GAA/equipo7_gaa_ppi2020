@@ -1,11 +1,10 @@
 import React from "react";
 import Menu2 from "./Menu2";
-import "../style/Parques2.css";
-import "../style/Recomendaciones.css";
 import { withRouter } from "react-router-dom";
+import "../style/Parques2.css"
 
 const Parques2 = (props) => {
-  const { history } = props;
+  const { history, location } = props;
   return (
     <div className="Parques2">
       <Menu2 />
@@ -24,13 +23,17 @@ const Parques2 = (props) => {
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         </ol>
+       
         <div className="carousel-inner">
-          <div className="carousel-item active">
+          
+          <div className="carousel-item active ">
+          
             <img
-              className="d-block w-100  "
+              className="d-block w-100"
               src="./imagenes_PPI/CerroPanAzucar8.jpg"
               alt="..."
             />
+            
           </div>
           <div className="carousel-item">
             <img
@@ -79,7 +82,7 @@ const Parques2 = (props) => {
           <span className="sr-only">Siguiente</span>
         </a>
       </div>
-      <h3 className="text-center mb-3">Cerro Pan de Azucar</h3>
+      <h3 className="text-center mb-3">{location.state.infoParque.nombre}</h3>
       <div className="accordion" id="accordionExample">
         <div className="card">
           <div className="card-header" id="headingOne">
@@ -105,9 +108,8 @@ const Parques2 = (props) => {
           >
             <div className="card-body">
               <h2 className=" contenido m-0">
-                Precio pasaje: 5.000<br></br>Linea A-San Antonio<br></br>Linea
-                AT-Miraflores<br></br>Linea N-Trece de Noviembre
-              </h2>
+               {location.state.infoParque.recomendaciones}
+.              </h2>
             </div>
           </div>
         </div>
@@ -134,11 +136,7 @@ const Parques2 = (props) => {
           >
             <div className="card-body">
               <h2 className="contenido">
-                En el siglo XVII el cerro fue uno de los primeros contactos de
-                Medellín con el mundo, este camino se haci­a llamar el camino de
-                piedras blancas que llevaba directo al rio magdalena, a partir
-                de este camino se crearon los primeros barrios vecinos, como lo
-                es en el caso del barrio Llanaditas el cual fue creado en 1950.{" "}
+              {location.state.infoParque.historia}
               </h2>
             </div>
           </div>
@@ -164,34 +162,8 @@ const Parques2 = (props) => {
             aria-labelledby="headingThree"
             data-parent="#accordionExample"
           >
-            <div class="card-body">
-              <h1 className="titulo">Tener vestimenta cómoda</h1>
-              <h2 className="contenido">
-                Ropa ancha, sudadera, zapatos cómodos.
-              </h2>
-              <div>
-                <h1 className="titulo">Llevar buena bebida</h1>
-                <h2 className="contenido">Agua, jugos y bebidas saludables.</h2>
-              </div>
-
-              <h1 className="titulo">Llevar buena comida</h1>
-              <h2 className="contenido">
-                Un buen almuerzo, un bocadillo, o una buena comida que te quite
-                el hambre
-              </h2>
-              <div>
-                <h1 className="titulo">Acompañantes</h1>
-                <h2 className="contenido">
-                  Amigos, padres, familia, son buenos para disfrutar mejor la
-                  experiencia.
-                </h2>
-              </div>
-              <h1 className="titulo">Tener un buen estado físico</h1>
-              <h2 className="contenido">
-                Necesitas tener resistencia para los largos recorridos que hay
-                en el camino
-              </h2>
-            </div>
+           <h2 className="contenido"> {location.state.infoParque.recomendaciones}
+             </h2>
           </div>
         </div>
       </div>
