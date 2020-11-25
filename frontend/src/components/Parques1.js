@@ -1,8 +1,10 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { Navbar, Form, FormControl } from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
 import "../style/Parques1.css";
+import "../style/Calificar.css";
+
 
 
 import Menu2 from "./Menu2";
@@ -25,7 +27,7 @@ class Parques1 extends React.Component {
     return (
       <div className="Parques1">
         <Menu2 />
-        <Navbar className="bg-light">
+        <Navbar className="bg-light mb-5">
           <div className="w-100">
             <Form>
               <FormControl
@@ -48,12 +50,16 @@ class Parques1 extends React.Component {
         <div>
           {this.state.parques.map((parque, index) => {
             return (
-              <div>
+              <div className="tarjeta">
+              <div className="card">
+                <div className="card-image">
                 <img
                   className="cerro2"
                   src="./imagenes_PPI/CerroPanAzucar1.jpg"
                   alt="Cerro"
                 />
+      
+                </div>
                 <div className="col-md-4 offset-md-4">
                   <button className="btn">
                     <img
@@ -73,20 +79,23 @@ class Parques1 extends React.Component {
                     ></img>
                   </button>
                 </div>
-                <p className="titulo">{parque.nombre}</p>
-                <div className="col-md-3 offset-md-4">
+                <h4 className="titulo">{parque.nombre}</h4>
+              
+    
+     
+                <div className="col-md-3 offset-md-4 mt-2 estrellas">
                   <img
-                    className="star"
+                    className="star estrellas"
                     src="./imagenes_PPI/Estrella.png"
                     alt="estrella"
                   ></img>
                   <img
-                    className="star2"
+                    className="star2 estrellas"
                     src="./imagenes_PPI/Estrella.png"
                     alt="estrella"
                   ></img>
                   <img
-                    className="star2"
+                    className="star2 estrellas"
                     src="./imagenes_PPI/Estrella.png"
                     alt="estrella"
                   ></img>
@@ -101,29 +110,28 @@ class Parques1 extends React.Component {
                     alt="estrella"
                   ></img>
                 </div>
+                
                 <button
                   type="button"
-                  class="Boton2 btn btn-primary"
-                  data-toggle="modal"
-                  data-target="#Estrellas"
+                  className="Boton2 btn btn-primary mb-3"
                 >
                   Calificar
                 </button>
 
                 <div
-                  class="modal fade"
+                  className="modal fade"
                   id="Estrellas"
                   tabindex="-1"
                   role="dialog"
                   aria-labelledby="exampleModalLabel"
                   aria-hidden="true"
                 >
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
+                  <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                      <div className="modal-header">
                         <button
                           type="button"
-                          class="close"
+                          className="close"
                           data-dismiss="modal"
                           aria-label="Close"
                         >
@@ -217,7 +225,7 @@ class Parques1 extends React.Component {
                                         <div class="modal-footer">
                                           <button
                                             type="button"
-                                            class="btn btn-secondary"
+                                            className="btn btn-secondary"
                                             data-dismiss="modal"
                                             onClick={() =>
                                               this.props.history.push(
@@ -240,6 +248,7 @@ class Parques1 extends React.Component {
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
             );
           })}
