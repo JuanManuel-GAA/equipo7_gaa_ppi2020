@@ -68,6 +68,22 @@ const Parques2Edit = () => {
               </tbody>
             </table>
           </div>
+          <div className="accordion" id="accordionExample">
+          <div class="card">
+            <div className="card-header" id="headingOne">
+              <h2 className="mb-0">
+                <button
+                  className="btn btn-link btn-block text-left"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Insertar parque
+                </button>
+              </h2>
+            </div>
         </div>
 
   );
