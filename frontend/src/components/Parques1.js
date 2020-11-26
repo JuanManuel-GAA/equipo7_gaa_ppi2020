@@ -70,7 +70,9 @@ class Parques1 extends React.Component {
                           state: { infoParque: parque }
                         })
                       }
-                    ></button>
+                    >
+                      <FontAwesomeIcon icon={["fas", "play-circle"]} />
+                    </button>
                     {/* ICONO PLAY */}
                   </div>
                   <h4 className="titulo">{parque.nombre}</h4>
