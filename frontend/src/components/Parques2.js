@@ -1,7 +1,8 @@
 import React from "react";
 import Menu2 from "./Menu2";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { withRouter } from "react-router-dom";
-import "../style/Parques2.css"
+import "../style/Parques2.css";
 
 const Parques2 = (props) => {
   const { history, location } = props;
@@ -23,17 +24,14 @@ const Parques2 = (props) => {
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         </ol>
-       
+
         <div className="carousel-inner">
-          
           <div className="carousel-item active ">
-          
             <img
               className="d-block w-100"
               src="./imagenes_PPI/CerroPanAzucar8.jpg"
               alt="..."
             />
-            
           </div>
           <div className="carousel-item">
             <img
@@ -108,8 +106,8 @@ const Parques2 = (props) => {
           >
             <div className="card-body">
               <h2 className=" contenido m-0">
-               {location.state.infoParque.recomendaciones}
-.              </h2>
+                {location.state.infoParque.recomendaciones}.{" "}
+              </h2>
             </div>
           </div>
         </div>
@@ -136,7 +134,7 @@ const Parques2 = (props) => {
           >
             <div className="card-body">
               <h2 className="contenido">
-              {location.state.infoParque.historia}
+                {location.state.infoParque.historia}
               </h2>
             </div>
           </div>
@@ -162,9 +160,17 @@ const Parques2 = (props) => {
             aria-labelledby="headingThree"
             data-parent="#accordionExample"
           >
-           <h2 className="contenido"> {location.state.infoParque.recomendaciones}
-             </h2>
+            <h2 className="contenido">
+              {" "}
+              {location.state.infoParque.recomendaciones}
+            </h2>
           </div>
+          <div className="text-center">
+            <button className="btn mapa">
+              <FontAwesomeIcon icon={["fas", "map-marked-alt"]} />
+            </button>
+          </div>
+          <br />
         </div>
       </div>
     </div>

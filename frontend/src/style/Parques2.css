@@ -4,3 +4,11 @@
   margin-top: 5px;
   margin-bottom: 15px;
 }
+
+.mapa {
+  margin-top: 10px;
+  border: 0px solid;
+  background-color: transparent;
+  color: #007ec1;
+  font-size: 30px;
+}
