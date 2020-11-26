@@ -38,10 +38,38 @@ const Parques2Edit = () => {
                   <th scope="col">Latitud</th>
                 </tr>
               </thead>
+              
               </div>
-              </div>
-              </div>
-</div>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Cerro pan de azúcar</td>
+                  <td>-75.5351811</td>
+                  <td>6.2471351</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Parque de los Pies Descalzos</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Parque Natural Cerro El Volador</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Parque Ambiental El Romeral</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
   );
 };
 export default withRouter(Parques2Edit);
