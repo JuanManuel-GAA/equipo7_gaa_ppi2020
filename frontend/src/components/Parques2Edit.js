@@ -84,6 +84,26 @@ const Parques2Edit = () => {
                 </button>
               </h2>
             </div>
+            <div
+              id="collapseOne"
+              className="collapse show"
+              aria-labelledby="headingOne"
+              data-parent="#accordionExample"
+            >
+              <div className="card-body">
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Nombre parque
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Nombre parque"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
         </div>
 
   );
