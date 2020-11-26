@@ -169,6 +169,7 @@ const Parques2 = (props) => {
             <button className="btn mapa">
               <FontAwesomeIcon icon={["fas", "map-marked-alt"]} />
             </button>
+            {/*ICONO MAPA*/}
           </div>
           <br />
         </div>
