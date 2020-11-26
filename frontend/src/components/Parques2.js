@@ -165,15 +165,14 @@ const Parques2 = (props) => {
               {location.state.infoParque.recomendaciones}
             </h2>
           </div>
-          <div className="text-center">
+        </div>
+      </div>
+      <div className="text-center">
             <button className="btn mapa">
               <FontAwesomeIcon icon={["fas", "map-marked-alt"]} />
             </button>
             {/*ICONO MAPA*/}
           </div>
-          <br />
-        </div>
-      </div>
     </div>
   );
 };
