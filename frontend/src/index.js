@@ -10,8 +10,8 @@ import Popper from "popper.js";
 import PpiContainer from "./containers/Ppicontainer";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faStar, faEdit, faLock } from "@fortawesome/free-solid-svg-icons";
-library.add(faStar, faEdit, faLock);
+import { faStar, faEdit, faLock, faBookmark, faPlayCircle } from "@fortawesome/free-solid-svg-icons";
+library.add(faStar, faEdit, faLock, faBookmark, faPlayCircle);
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<PpiContainer />, rootElement);
