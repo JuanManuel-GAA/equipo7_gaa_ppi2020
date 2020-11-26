@@ -484,6 +484,55 @@ const Parques2Edit = () => {
               </div>
             </div>
           </div>
+          <div className="card">
+            <div className="card-header" id="headingThree">
+              <h2 className="mb-0">
+                <button
+                  className="btn btn-link btn-block text-left titulo40"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Eliminar Parque
+                </button>
+              </h2>
+            </div>
+            <div
+              id="collapseThree"
+              className="collapse"
+              aria-labelledby="headingThree"
+              data-parent="#accordionExample"
+            >
+              <div className="card-body">
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    ID
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Ingrese ID"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <br />
+                <button
+                  type="button"
+                  className="Boton3 btn"
+                  onClick={() => history.push("/")}
+                >
+                  Eliminar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
         </div>
 
   );
