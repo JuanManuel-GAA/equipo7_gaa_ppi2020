@@ -6,7 +6,7 @@ import Menu2 from "./Menu2";
 const Parques2Edit = () => {
   return (
     <div className="Parques2Edit">
- <Menu2 />
+      <Menu2 />
       <div className=" text-center py-5">
         <div className="card-header" id="headingOne">
           <h2 className="mb-0">
@@ -22,6 +22,7 @@ const Parques2Edit = () => {
             </button>
           </h2>
         </div>
+
         <div
           id="collapseOne"
           className="collapse show"
@@ -38,8 +39,6 @@ const Parques2Edit = () => {
                   <th scope="col">Latitud</th>
                 </tr>
               </thead>
-              
-              </div>
               <tbody>
                 <tr>
                   <th scope="row">1</th>
@@ -68,7 +67,9 @@ const Parques2Edit = () => {
               </tbody>
             </table>
           </div>
-          <div className="accordion" id="accordionExample">
+        </div>
+
+        <div className="accordion" id="accordionExample">
           <div class="card">
             <div className="card-header" id="headingOne">
               <h2 className="mb-0">
@@ -84,6 +85,7 @@ const Parques2Edit = () => {
                 </button>
               </h2>
             </div>
+
             <div
               id="collapseOne"
               className="collapse show"
@@ -533,8 +535,6 @@ const Parques2Edit = () => {
         </div>
       </div>
     </div>
-        </div>
-
   );
 };
 export default withRouter(Parques2Edit);
