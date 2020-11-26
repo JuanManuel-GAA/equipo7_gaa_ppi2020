@@ -42,7 +42,7 @@ export default function Ppicontainer1() {
           <Route path="/Parques1" exact component={Parques1} />
           <Route path="/Parques1Edit" exact component={Parques1Edit} />
           <Route path="/Parques2" exact component={Parques2} />
-
+          <Route path="/Parques2Edit" exact component={Parques2Edit} />
       
          
           <Route path="/HistoriaEdit" exact component={HistoriaEdit} />
