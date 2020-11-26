@@ -6,7 +6,23 @@ import Menu2 from "./Menu2";
 const Parques2Edit = () => {
   return (
     <div className="Parques2Edit">
-
+ <Menu2 />
+      <div className=" text-center py-5">
+        <div className="card-header" id="headingOne">
+          <h2 className="mb-0">
+            <button
+              className="btn btn-link btn-block text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Tabla de información
+            </button>
+          </h2>
+        </div>
+</div>
 </div>
   );
 };
