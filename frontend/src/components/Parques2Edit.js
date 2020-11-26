@@ -22,7 +22,25 @@ const Parques2Edit = () => {
             </button>
           </h2>
         </div>
-</div>
+        <div
+          id="collapseOne"
+          className="collapse show"
+          aria-labelledby="headingOne"
+          data-parent="#accordionExample"
+        >
+          <div className="card-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Longitud</th>
+                  <th scope="col">Latitud</th>
+                </tr>
+              </thead>
+              </div>
+              </div>
+              </div>
 </div>
   );
 };
