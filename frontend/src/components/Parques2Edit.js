@@ -104,6 +104,172 @@ const Parques2Edit = () => {
                     autofocus=""
                   />
                 </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Comentario
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Comentario"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputEmail" class="sr-only">
+                    Transporte
+                  </label>
+                  <input
+                    type="email"
+                    id="inputEmail"
+                    className="form-control"
+                    placeholder="Transporte"
+                    required=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Recomendaciones
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Recomendaciones"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Historia
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Historia"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Dirección
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Dirección"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Longitud
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Longitud"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Latitud
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Latitud"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Imagen 1
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Imagen 1"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Imagen 2
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Imagen 2"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Imagen 3
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Imagen 3"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Imagen 4
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Imagen 4"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <h3>
+                  <label for="inputName" className="sr-only">
+                    Imagen 5
+                  </label>
+                  <input
+                    type="name"
+                    id="inputName"
+                    className="form-control"
+                    placeholder="Imagen 5"
+                    required=""
+                    autofocus=""
+                  />
+                </h3>
+                <br />
+                <button
+                  type="button"
+                  className="Boton3 btn"
+                  onClick={() => history.push("/")}
+                >
+                  Añadir
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
   );
