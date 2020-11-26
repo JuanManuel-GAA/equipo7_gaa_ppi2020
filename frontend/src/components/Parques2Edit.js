@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import "../style/Parques2Edit.css";
 
 
 import Menu2 from "./Menu2";
