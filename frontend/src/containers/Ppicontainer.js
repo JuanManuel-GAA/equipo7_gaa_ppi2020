@@ -22,6 +22,7 @@ import Objetivo from "../components/Objetivo";
 import SobreNosotros from "../components/SobreNosotros";
 
 import Parques1Edit from "../components/Parques1Edit";
+import Parques2Edit from "../components/Parques2Edit.js";
 import HistoriaEdit from "../components/HistoriaEdit";
 
 
@@ -41,6 +42,7 @@ export default function Ppicontainer1() {
           <Route path="/Parques1" exact component={Parques1} />
           <Route path="/Parques1Edit" exact component={Parques1Edit} />
           <Route path="/Parques2" exact component={Parques2} />
+
       
          
           <Route path="/HistoriaEdit" exact component={HistoriaEdit} />
