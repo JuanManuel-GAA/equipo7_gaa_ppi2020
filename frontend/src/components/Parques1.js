@@ -78,32 +78,16 @@ class Parques1 extends React.Component {
                     </div>
                     <h4 className="titulo">{parque.nombre}</h4>
 
-                    <div className="col-md-3 offset-md-4 mt-2 estrellas">
-                      <img
-                        className="star estrellas"
-                        src="./imagenes_PPI/Estrella.png"
-                        alt="estrella"
-                      ></img>
-                      <img
-                        className="star2 estrellas"
-                        src="./imagenes_PPI/Estrella.png"
-                        alt="estrella"
-                      ></img>
-                      <img
-                        className="star2 estrellas"
-                        src="./imagenes_PPI/Estrella.png"
-                        alt="estrella"
-                      ></img>
-                      <img
-                        className="star2"
-                        src="./imagenes_PPI/Estrella.png"
-                        alt="estrella"
-                      ></img>
-                      <img
-                        className="star2"
-                        src="./imagenes_PPI/Estrella.png"
-                        alt="estrella"
-                      ></img>
+                    <div className="rating" data-rating="1">
+                      <span className="fa fa-star rating-star"></span>
+
+                      <span className="fa fa-star rating-star"></span>
+
+                      <span className="fa fa-star rating-star"></span>
+
+                      <span className="fa fa-star rating-star"></span>
+
+                      <span className="fa fa-star rating-star"></span>
                     </div>
 
                     <button
@@ -115,25 +99,24 @@ class Parques1 extends React.Component {
                       Calificar
                     </button>
                     <div className="comentario1 mb-4 mt-3">
-                    <Form>
-                      <div class="form-group">
-                        <label for="exampleFormControlTextarea1 ">
-                          Comentario:
-                        </label>
-                        <textarea
-                          className="form-control"
-                          id="exampleFormControlTextarea1"
-                          rows="1"
-                        ></textarea>
-                        <div className="leer">
-                          <Link to="/Comentarios">Leer más</Link>
+                      <Form>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1 ">
+                            Comentario:
+                          </label>
+                          <textarea
+                            className="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="1"
+                          ></textarea>
+                          <div className="leer">
+                            <Link to="/Comentarios">Leer más</Link>
+                          </div>
+                          <label for="exampleFormControlTextarea1"></label>
                         </div>
-                        <label for="exampleFormControlTextarea1"></label>
-                      </div>
-                    </Form>
+                      </Form>
+                    </div>
                   </div>
-                  </div>
-                  
                 </div>
                 <div
                   class="modal fade"

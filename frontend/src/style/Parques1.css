@@ -33,22 +33,17 @@
   font-size: 30px;
 }
 
-.estrellas {
-  align-items: center;
-}
-.star {
-  width: 30px;
-  margin-left: 12vh;
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1;
 }
 
-.star2 {
-  width: 30px;
-}
-.star3 {
-  width: 30px;
-}
-.star4 {
-  width: 30px;
+.rating {
+  color: #007ec1;
+  font-size: 25px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .buscar {

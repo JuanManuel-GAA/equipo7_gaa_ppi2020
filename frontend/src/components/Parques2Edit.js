@@ -130,17 +130,19 @@ handleChange= async e=>{
               data-parent="#accordionExample"
             >
               <div className="card-body">
-                <h3>
+              <h3>
                   <label for="inputName" className="sr-only">
                     Nombre parque
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="nombre"
+                    id="nombre"
                     className="form-control"
                     placeholder="Nombre parque"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.nombre:''}
                   />
                 </h3>
                 <h3>
@@ -149,11 +151,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="comentario"
+                    id="comentario"
                     className="form-control"
                     placeholder="Comentario"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.comentario:''}
                   />
                 </h3>
                 <h3>
@@ -161,11 +165,13 @@ handleChange= async e=>{
                     Transporte
                   </label>
                   <input
-                    type="email"
-                    id="inputEmail"
+                    type="name"
+                    name="transporte"
+                    id="transporte"
                     className="form-control"
                     placeholder="Transporte"
                     required=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.transporte:''}
                   />
                 </h3>
                 <h3>
@@ -174,11 +180,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="recomendaciones"
+                    id="recomendaciones"
                     className="form-control"
                     placeholder="Recomendaciones"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.recomendaciones:''}
                   />
                 </h3>
                 <h3>
@@ -187,11 +195,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="historia"
+                    id="historia"
                     className="form-control"
                     placeholder="Historia"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.historia:''}
                   />
                 </h3>
                 <h3>
@@ -200,11 +210,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="direccion"
+                    id="direccion"
                     className="form-control"
                     placeholder="Dirección"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.direccion:''}
                   />
                 </h3>
                 <h3>
@@ -213,11 +225,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="longitud"
+                    id="longitud"
                     className="form-control"
                     placeholder="Longitud"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.longitud:''}
                   />
                 </h3>
                 <h3>
@@ -226,11 +240,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="latitud"
+                    id="latitud"
                     className="form-control"
                     placeholder="Latitud"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.latitud:''}
                   />
                 </h3>
                 <h3>
@@ -239,11 +255,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="imagen1"
+                    id="imagen1"
                     className="form-control"
                     placeholder="Imagen 1"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.imagen1:''}
                   />
                 </h3>
                 <h3>
@@ -252,11 +270,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="imagen2"
+                    id="imagen2"
                     className="form-control"
                     placeholder="Imagen 2"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.imagen2:''}
                   />
                 </h3>
                 <h3>
@@ -265,11 +285,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="imagen3"
+                    id="imagen3"
                     className="form-control"
                     placeholder="Imagen 3"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.imagen3:''}
                   />
                 </h3>
                 <h3>
@@ -278,11 +300,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="imagen4"
+                    id="imagen4"
                     className="form-control"
                     placeholder="Imagen 4"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.imagen4:''}
                   />
                 </h3>
                 <h3>
@@ -291,11 +315,13 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="imagen5"
+                    id="imagen5"
                     className="form-control"
                     placeholder="Imagen 5"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.imagen5:''}
                   />
                 </h3>
                 <br />
@@ -581,18 +607,20 @@ handleChange= async e=>{
                   </label>
                   <input
                     type="name"
-                    id="inputName"
+                    name="ID"
+                    id="ID"
                     className="form-control"
                     placeholder="Ingrese ID"
                     required=""
                     autofocus=""
+                    onChange={this.handleChange} value={ parques2 ? parques2.ID:''}
                   />
                 </h3>
                 <br />
                 <button
                   type="button"
                   className="Boton3 btn"
-                  onClick={() => history.push("/")}
+                  onClick={()=>this.PeticionesDelete()}
                 >
                   Eliminar
                 </button>
