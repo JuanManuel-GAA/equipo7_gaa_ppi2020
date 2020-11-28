@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
-import App from "../components/App";
-import Loading from "../components/Loading";
+import Bienvenida from "../components/Bienvenida";
+
 import IniciarSesion from "../components/IniciarSesion";
 import IniciarFacebook from "../components/IniciarFacebook";
 import IniciarGoogle from "../components/IniciarGoogle";
@@ -31,8 +31,9 @@ export default function Ppicontainer1() {
     <div className="Ppicontainer">
       <BrowserRouter>
         <React.Fragment>
-          <Route path="/Loading" exact component={Loading} />
-          <Route path="/" exact component={App} />
+  
+  
+          <Route path="/" exact component={Bienvenida} />
           <Route path="/IniciarSesion" exact component={IniciarSesion} />
           <Route path="/IniciarGoogle" exact component={IniciarGoogle} />
           <Route path="/Registro1" exact component={Registro1} />

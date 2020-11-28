@@ -29,28 +29,28 @@ const Parques2 = (props) => {
           <div className="carousel-item active ">
             <img
               className="d-block w-100"
-              src="./imagenes_PPI/CerroPanAzucar8.jpg"
+              src={location.state.infoParque.imagen2}
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
               className="d-block w-100"
-              src="./imagenes_PPI/CerroPanAzucar5.jpg"
+              src={location.state.infoParque.imagen3}
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
               className="d-block w-100"
-              src="./imagenes_PPI/CerroPanAzucar6.jpg"
+              src={location.state.infoParque.imagen4}
               alt="..."
             />
           </div>
           <div className="carousel-item">
             <img
               className="d-block w-100"
-              src="./imagenes_PPI/CerroPanAzucar7.jpg"
+              src={location.state.infoParque.imagen5}
               alt="..."
             />
           </div>
