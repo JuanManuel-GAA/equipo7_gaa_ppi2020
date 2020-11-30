@@ -30,17 +30,15 @@ class Parques1 extends React.Component {
 
   calificar(evento) {
     evento.preventDefault();
-    
-   api
+
+    api
       .post("parque_calificado", {
         ID_parque: this.state.ID_parque,
         ID_usuario: localStorage.getItem("idUsuario"),
         calificacion: this.state.calificacion,
         comentario: this.state.comentario
       })
-      .then((respuesta) => {
-        
-      });
+      .then((respuesta) => {});
   }
 
   handleInputChange(evento) {
@@ -110,8 +108,8 @@ class Parques1 extends React.Component {
                     </div>
                     <h4 className="titulo">{parque.nombre}</h4>
 
-                    <div className="rating" data-rating="1">
-                      <span className="fa fa-star rating-star"></span>
+                    <div className="rating" data-rating="2">
+                      <div className="fa fa-star rating-star"></div>
 
                       <span className="fa fa-star rating-star"></span>
 
@@ -122,6 +120,8 @@ class Parques1 extends React.Component {
                       <span className="fa fa-star rating-star"></span>
                     </div>
 
+
+                
                     <button
                       type="button"
                       class="Boton2 btn-primary btn"
@@ -143,7 +143,17 @@ class Parques1 extends React.Component {
                             rows="1"
                           ></textarea>
                           <div className="leer">
-                            <Link to="/Comentarios">Leer más</Link>
+                            <Link
+                              to="/Comentarios"
+                              onClick={() =>
+                                this.props.history.push({
+                                  pathname: "/Comentarios",
+                                  
+                                })
+                              }
+                            >
+                              Leer más
+                            </Link>
                           </div>
                           <label for="exampleFormControlTextarea1"></label>
                         </div>
@@ -231,7 +241,6 @@ class Parques1 extends React.Component {
                                   type="radio"
                                   name="calificacion"
                                   id="rate-1"
-                                  
                                   value="1"
                                   onChange={this.handleInputChange}
                                 />

@@ -1,10 +1,21 @@
 import React from "react";
 import "../style/Comentarios.css";
 import Menu2 from "./Menu2";
-
 import { withRouter } from "react-router-dom";
 
+import api from "../axios/axios";
+
 class Comentarios extends React.Component {
+  state = {
+    calificacion: []
+  };
+  componentDidMount() {
+    api.get(`parque_calificado`).then((res) => {
+      const calificacion = res.data;
+      this.setState({ calificacion });
+    });
+  }
+
   render() {
     return (
       <div className="">
@@ -12,7 +23,7 @@ class Comentarios extends React.Component {
         <div className="row comentarios justify-content-center">
           <div className="col-10">
             <br />
-
+            return(
             <div className="media">
               <img
                 src="./imagenes_PPI/Playa.jpg"
@@ -25,12 +36,12 @@ class Comentarios extends React.Component {
                   Fernando <span>6:47pm, Ayer</span>
                 </p>
                 <p className="comentario">
-                  Excelente lugar para divisar todo el centro de medellín y la
-                  zona Sur del Valle de Aburrá.
+                Excelente lugar para divisar todo el centro de medellín y la
+                zona Sur del Valle de Aburrá.
                 </p>
               </div>
             </div>
-
+            );
             <br />
 
             <div className="media">
@@ -128,4 +139,5 @@ class Comentarios extends React.Component {
     );
   }
 }
+
 export default withRouter(Comentarios);

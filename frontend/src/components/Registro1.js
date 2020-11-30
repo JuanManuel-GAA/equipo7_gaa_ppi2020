@@ -21,14 +21,13 @@ class Registro1 extends React.Component {
   Register(evento) {
     evento.preventDefault();
     api
-      .post("usuario/Register", {
+      .post("usuario", {
         NombreCompleto: this.state.NombreCompleto,
         NombreUsuario: this.state.NombreUsuario,
-        FechaNacimiento: this.state.NombreUsuario
+        FechaNacimiento: this.state.FechaNacimiento
       })
       .then((respuesta) => {
-        localStorage.setItem("idUsuario", respuesta.data.idUsuario);
-        this.props.history.push("/Registro2");
+        this.props.history.push("Registro2");
       });
   }
 
@@ -40,11 +39,7 @@ class Registro1 extends React.Component {
     this.setState({
       [name]: value
     });
-
-    this.Register = this.Register.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
   }
-
   render() {
     return (
       <div className="Registro1">
@@ -56,17 +51,17 @@ class Registro1 extends React.Component {
           </Navbar>
         </div>
         <Container className="text-center mt-2">
-          <form onSubmit={this.Register} className="form-signin mt-4 py-1">
-            <label for="inputNameUser" className="sr-only">
-              Nombre Completo
+          <form className="form-signin mt-4 py-1">
+            <label for="inputName" className="sr-only">
+              Nombre
             </label>
             <input
-              type="nameUser"
-              id="inputNameUser"
+              type="name"
+              id="inputName"
               className="form-control"
-              placeholder="Nombre Completo"
+              placeholder="Nombre"
               required=""
-              onChange={this.handleInputChange}
+              autofocus=""
             />
             <label for="inputNameUser" className="sr-only">
               Nombre de usuario
@@ -77,7 +72,6 @@ class Registro1 extends React.Component {
               className="form-control"
               placeholder="Nombre de usuario"
               required=""
-              onChange={this.handleInputChange}
             />
             <label for="inputBirth" className="sr-only">
               Fecha de nacimiento
@@ -88,7 +82,6 @@ class Registro1 extends React.Component {
               className="form-control"
               placeholder="Fecha de nacimiento"
               required=""
-              onChange={this.handleInputChange}
             />
             <div className="checkbox mb-3"></div>
             <button
