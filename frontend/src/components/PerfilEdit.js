@@ -4,7 +4,8 @@ import "../style/PerfilEdit.css";
 
 import { withRouter } from "react-router-dom";
 
-const PerfilEdit = () => {
+const PerfilEdit = (props) => {
+  const { history, location } = props;
   return (
     <div className="PerfilEdit ">
       <Menu2 />
@@ -18,72 +19,79 @@ const PerfilEdit = () => {
             />
           </div>
           <br />
-          <div className="Nombre mt-5">
-          <h3> 
-          <label for="inputName" className="sr-only">
-            Nombre usuario
-          </label>
+          <div className="mt-5">
           <input
-            type="name"
-            id="inputName"
-            className="form-control"
-            placeholder="Nombre usuario"
-            required=""
-            autofocus=""
-          />
-              </h3>
-              <h3>
-              <label for="inputName" className="sr-only">
-            Edad
-          </label>
+              type="text"
+              id=""
+              className="form-control mb-2"
+              placeholder="Correo electrónico"
+              value={location.state.infoUsuario.correo}
+            />
+            <input
+              type="email"
+              id="inputName"
+              className="form-control mb-2"
+              placeholder="Nombre usuario"
+              value={location.state.infoUsuario.nombre_usuario}
+            />
+
+            <input
+              type="name"
+              id="inputName"
+              className="form-control mb-2"
+              placeholder="País de origen"
+              value={location.state.infoUsuario.pais_origen}
+            />
+
+            <input
+              type="email"
+              id="inputEmail"
+              className="form-control mb-2"
+              placeholder="Télefono"
+              value={location.state.infoUsuario.telefono}
+            />
+
+            <input
+              type="name"
+              id="inputName"
+              className="form-control mb-2"
+              placeholder="Sexo "
+              value={location.state.infoUsuario.sexo}
+            />
+          
           <input
-            type="name"
-            id="inputName"
-            className="form-control"
-            placeholder="Edad"
-            required=""
-            autofocus=""
-          />
-           </h3>
-           <h3>
-              <label for="inputEmail" class="sr-only">
-            Correo electrónico
-          </label>
-          <input
-            type="email"
-            id="inputEmail"
-            className="form-control"
-            placeholder="Correo electrónico"
-            required=""
-          />
-            </h3>
-           <h3> 
-              <label for="inputName" className="sr-only">
-            Cuidad- Municipio
-          </label>
-          <input
-            type="name"
-            id="inputName"
-            className="form-control"
-            placeholder="Ciudad-Municipio"
-            required=""
-            autofocus=""
-          />
-            </h3>
-            <br/>
+              type="text"
+              id="inputName"
+              className="form-control mb-2"
+              placeholder="Fecha de nacimiento"
+              value={location.state.infoUsuario.fecha_nacimiento}
+            />
+            <input
+              type="name"
+              id="inputName"
+              className="form-control mb-2"
+              placeholder="Nombres"
+              value={location.state.infoUsuario.nombre}
+            />
+            <input
+              type="name"
+              id="inputName"
+              className="form-control mb-5"
+              placeholder="Apellidos"
+              value={location.state.infoUsuario.apellidos}
+            />
+
             <button
-      type="button"
-      className="Boton3 btn"
-      onClick={() => history.push("/")}
-    >
-      Actualizar datos
-    </button>
-            </div>
-      </center>
+              type="button"
+              className="Boton3 btn mt-2"
+              onClick={() => history.push("/")}
+            >
+              Actualizar datos
+            </button>
+          </div>
+        </center>
       </form>
-      </div>
-      
-      
+    </div>
   );
 };
 export default withRouter(PerfilEdit);
